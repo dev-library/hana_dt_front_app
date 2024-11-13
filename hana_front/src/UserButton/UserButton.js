@@ -1,6 +1,10 @@
 
 const UserButton = () => {
-    return <button>유저버튼</button>;
+    const handleClick = () => {
+        console.log('UserButton was clicked!');
+    };
+
+    return <button onClick={handleClick}>유저버튼</button>;
 }
 
 export default UserButton;
