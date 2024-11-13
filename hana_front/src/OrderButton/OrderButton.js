@@ -1,7 +1,14 @@
 
 const OrderButton = () => {
     const handleClick = () => {
-        console.log('OrderButton was clicked!');
+        fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+        });
     };
 
     return <button onClick={handleClick}>주문버튼</button>;
